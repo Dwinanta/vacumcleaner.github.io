@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "coinpayments": "^2.2.0",
+    "express": "^4.19.2",
+    "xendit-node": "^5.0.0"
+  }
+}

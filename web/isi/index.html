@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Project | Gaming Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Kanit:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Method</h1>
+        <form id="projectForm">
+            <!-- Project Details Section -->
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+
+            <label for="whatsapp">Nomor WhatsApp:</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Nomor WhatsApp Anda" required>
+
+            <!-- Payment Method Section -->
+            <label for="paymentMethod">Pilih Metode Pembayaran:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="" disabled selected>Pilih Metode Pembayaran</option>
+                <option value="ovo">OVO / Dana</option>
+                <option value="crypto">Crypto</option>
+                <option value="bank_transfer">Transfer Bank</option>
+            </select>
+
+            <!-- Payment Details Section -->
+            <div id="paymentDetails"></div>
+
+            <button type="submit"><a href="https://wa.me/6287811002643">Submit</a></button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

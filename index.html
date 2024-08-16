@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Vacuum Cleaner</title>
+    <style>
+          /* Style Umum */
+          html{
+            scroll-behavior: smooth;
+          }
+          *{
+            box-sizing: border-box;
+          }
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-image: url('woman-with-accumulator-vacuum-cleaner-drinking-coffee_1303-27239.avif');
+            color: white;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            margin-top: 18%;
+            text-shadow: 1px 1px black;
+            font-size: 2.5em;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        header p {
+            text-shadow: 1px 1px black;
+            font-size: 1.2em;
+            margin: 10px 0 30px;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-in-out forwards;
+        }
+
+        header .cta-button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            opacity: 0;
+            animation: fadeInButton 2s ease-in-out forwards;
+        }
+
+        header .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        section {
+            padding: 40px 20px;
+            transition: all 0.3s ease;
+        }
+        section p{
+            color: black;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        .section-content img {
+            max-width: 45%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .section-content .text {
+            max-width: 50%;
+            color: black;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .section-content.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .promo {
+            background-color: #4b41d8;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .promo h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .promo .price {
+            font-size: 2em;
+            color: red;
+            text-decoration: line-through;
+            margin: 0;
+            animation: fadeInText 1.5s ease-in-out forwards;
+        }
+
+        .promo .discounted-price {
+            font-size: 3em;
+            color: #ffffff;
+            font-weight: bold;
+            margin: 10px 0;
+            animation: fadeInText 1.5s ease-in-out forwards;
+        }
+
+        .promo p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-in-out forwards;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .features .feature {
+            flex: 1;
+            margin: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background-color: white;
+        }
+
+        .features .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .features .feature img {
+            max-width: 150px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .features .feature h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInButton {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            header{
+                background-image: url(Default_Create_three_separate_images_showcasing_the_key_featur_0.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .section-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-content.reverse {
+                flex-direction: column;
+            }
+
+            .section-content img, .section-content .text {
+                max-width: 100%;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .features .feature {
+                margin: 10px 0;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .promo h1 {
+                font-size: 2em;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Solusi Terbaik untuk Rumah Bersih dan Sehat</h1>
+        <p>Dapatkan Vacuum Cleaner dengan Daya Hisap Kuat dan Harga Terjangkau</p>
+        <a href="#promo" class="cta-button">Beli Sekarang</a>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <h2>Masalah yang Dihadapi</h2>
+        <div class="section-content">
+            <img src="problem (1).jpg" alt="Masalah Rumah Kotor">
+            <div class="text">
+                <p>Rumah yang kotor dapat menjadi sarang penyakit, terutama bagi keluarga dengan anak kecil dan orang tua. Membersihkan rumah dengan alat yang tidak efektif sering kali memakan waktu lama dan tidak memberikan hasil yang memuaskan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <h2>Solusi dari Kami</h2>
+        <div class="section-content reverse">
+            <img src="problem (2).jpg" alt="Solusi Pembersihan Rumah">
+            <div class="text">
+                <p>Kami menawarkan Handheld Vacuum Cleaner yang dirancang khusus untuk membersihkan rumah dengan lebih efisien dan efektif. Produk kami dilengkapi dengan daya hisap kuat, filtrasi HEPA, dan kemampuan multi-permukaan yang membuat rumah Anda bersih dalam waktu singkat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Specifications -->
+    <section class="specifications">
+        <h2>Spesifikasi Produk</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="gbr1 (1).jpg" alt="Daya Hisap Kuat">
+                <h3>Daya Hisap Kuat</h3>
+                <p>Bersihkan dengan mendalam menggunakan daya hisap yang tak tertandingi.</p>
+            </div>
+            <div class="feature">
+                <img src="gbr1 (2).jpg" alt="Multi-Permukaan">
+                <h3>Kemampuan Multi-Permukaan</h3>
+                <p>Bersihkan dengan mudah dari karpet, ubin, hingga lantai kayu keras.</p>
+            </div>
+            <div class="feature">
+                <img src="gbr1 (3).jpg" alt="Filtrasi HEPA">
+                <h3>Filtrasi HEPA</h3>
+                <p>Menghilangkan 99.9% alergen dan partikel debu.</p>
+            </div>
+            <div class="feature">
+                <img src="gbr4.jpg" alt="Kemudahan Tanpa Kabel">
+                <h3>Kemudahan Tanpa Kabel</h3>
+                <p>Tidak ada lagi kabel kusut, bersihkan dengan bebas dan mudah.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo" id="promo">
+        <h1>Promo Spesial</h1>
+        <p class="price">Rp300.000</p>
+        <p class="discounted-price">Rp99.000</p>
+        <p>Tersedia pembayaran COD (Bayar di Tempat)</p>
+        <div>
+            <a href="web/isi/index.html" class="cta-button">Pesan Sekarang via WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Hubungi Kami: marketdropship.com | 087811002643</p>
+        <p>&copy; 2024 Velocity Dropshipping. Hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>
