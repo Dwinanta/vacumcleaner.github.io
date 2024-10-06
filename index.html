@@ -62,5 +62,29 @@
             <p>&copy; 2023 Kamera HD 1080P. Semua Hak Dilindungi.</p>
         </div>
     </footer>
+<script>
+    // Mengatur waktu akhir countdown selama 1 jam dari waktu saat ini
+    const countdownTime = new Date().getTime() + 60 * 60 * 1000;
+
+    // Update countdown setiap 1 detik
+    const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownTime - now;
+
+        // Perhitungan waktu untuk jam, menit, dan detik
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Tampilkan countdown
+        document.getElementById("countdown").innerHTML = hours + "j " + minutes + "m " + seconds + "d ";
+
+        // Ketika countdown selesai
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").innerHTML = "Waktu Promo Habis!";
+        }
+    }, 1000);
+</script>
 </body>
 </html>
